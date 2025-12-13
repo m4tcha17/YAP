@@ -6,7 +6,7 @@
 
 [sub_resource type="Resource" id="Resource_tory2"]
 script = ExtResource("2_tory2")
-max_speed = 637.374
+max_speed = 689.394
 metadata/_custom_type_script = "uid://b600652vmp2a4"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_he325"]
@@ -18,7 +18,7 @@ status = SubResource("Resource_tory2")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ppmss")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["player"]]
 visible = false
 position = Vector2(-0.99999994, -1.9999999)
 scale = Vector2(7, 7)

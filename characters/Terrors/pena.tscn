@@ -1,12 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkscn8bauj4om"]
+[gd_scene load_steps=3 format=3 uid="uid://bkscn8bauj4om"]
 
-[ext_resource type="Script" uid="uid://cqq7t6udhj87h" path="res://characters/scripts/terror.gd" id="1_2fx8k"]
 [ext_resource type="Texture2D" uid="uid://b4xf21pe0u7dk" path="res://assets/base/circle.png" id="1_iqyh1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_he325"]
 
 [node name="Pena" type="CharacterBody2D"]
-script = ExtResource("1_2fx8k")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 0.64405227, 0.85818744, 1)

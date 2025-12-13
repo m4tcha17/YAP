@@ -1,8 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://b44j5ok564aj2"]
+[gd_scene load_steps=14 format=3 uid="uid://b44j5ok564aj2"]
 
 [ext_resource type="Script" uid="uid://cqq7t6udhj87h" path="res://characters/scripts/terror.gd" id="1_f2tlt"]
 [ext_resource type="Texture2D" uid="uid://be42htnykrbrm" path="res://assets/base/diamond.png" id="1_yu4wx"]
+[ext_resource type="Script" uid="uid://b600652vmp2a4" path="res://characters/scripts/base.gd" id="2_j8k2l"]
 [ext_resource type="Texture2D" uid="uid://d2wcsixyldqny" path="res://assets/base/Untitled design.png" id="3_8xo6e"]
+
+[sub_resource type="Resource" id="Resource_j8k2l"]
+script = ExtResource("2_j8k2l")
+metadata/_custom_type_script = "uid://b600652vmp2a4"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_he325"]
 
@@ -286,10 +291,11 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8xo6e"]
-radius = 517.32
+radius = 648.0123
 
 [node name="Godwin" type="CharacterBody2D"]
 script = ExtResource("1_f2tlt")
+status = SubResource("Resource_j8k2l")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0, 0.46207666, 0.80714935, 1)
@@ -325,8 +331,7 @@ initial_velocity_max = 1000.0
 scale_amount_min = 0.02
 scale_amount_max = 0.05
 
-[node name="Detector" type="Area2D" parent="."]
+[node name="Field" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
-visible = false
+[node name="FieldCollision" type="CollisionShape2D" parent="Field"]
 shape = SubResource("CircleShape2D_8xo6e")
