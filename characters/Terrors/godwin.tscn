@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b44j5ok564aj2"]
+[gd_scene load_steps=12 format=3 uid="uid://b44j5ok564aj2"]
 
 [ext_resource type="Script" uid="uid://cqq7t6udhj87h" path="res://characters/scripts/terror.gd" id="1_f2tlt"]
 [ext_resource type="Texture2D" uid="uid://be42htnykrbrm" path="res://assets/base/diamond.png" id="1_yu4wx"]
@@ -285,11 +285,15 @@ _data = {
 &"walk": SubResource("Animation_qtqyn")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_8xo6e"]
+radius = 517.32
+
 [node name="Godwin" type="CharacterBody2D"]
 script = ExtResource("1_f2tlt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0, 0.46207666, 0.80714935, 1)
+texture_filter = 1
 texture = ExtResource("1_yu4wx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -302,6 +306,7 @@ shape = SubResource("CircleShape2D_he325")
 libraries = {
 &"": SubResource("AnimationLibrary_8xo6e")
 }
+autoplay = "kamote"
 
 [node name="kamote" type="Sprite2D" parent="."]
 visible = false
@@ -311,10 +316,17 @@ texture = ExtResource("3_8xo6e")
 
 [node name="GPUParticles2D" type="CPUParticles2D" parent="."]
 visible = false
-amount = 100
+amount = 10
 texture = ExtResource("3_8xo6e")
+lifetime = 0.3
 direction = Vector2(0, 0)
 spread = 180.0
 initial_velocity_max = 1000.0
 scale_amount_min = 0.02
 scale_amount_max = 0.05
+
+[node name="Detector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
+visible = false
+shape = SubResource("CircleShape2D_8xo6e")
