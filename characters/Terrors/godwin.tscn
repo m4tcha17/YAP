@@ -294,6 +294,7 @@ _data = {
 radius = 648.0123
 
 [node name="Godwin" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_f2tlt")
 status = SubResource("Resource_j8k2l")
 

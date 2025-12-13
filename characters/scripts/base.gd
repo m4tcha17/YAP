@@ -14,10 +14,5 @@ extends Resource
 #instensity of the force to bounce back when colliding with any objects
 @export_range(1, 100000) var avoidance_strength := 21000.0
 
-# Stores objects that enter the "Collision Area"
-# Collision Area: pushes away the mob from the objects that are listed on the lists
-var object_list : CharacterBody2D
-var pointer : RayCast2D
-
 
 enum STATES {IDLE, WALK, WORK}

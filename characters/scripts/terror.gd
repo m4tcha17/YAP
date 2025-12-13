@@ -20,6 +20,7 @@ func _ready() -> void:
 	field.body_entered.connect(get_object_reference)
 	field.body_exited.connect(remove_object_reference)
 
+
 func _physics_process(_delta: float) -> void:
 	# Only run if we actually have a valid target
 	if current_target != null:
@@ -29,6 +30,7 @@ func track_target() -> void:
 	# Update Raycast rotation and length
 	var direction = pointer.global_position.direction_to(current_target.global_position)
 	var distance = pointer.global_position.distance_to(current_target.global_position)
+	var intensity = get_arrival_intensity(current_target)
 	
 	pointer.target_position = Vector2(distance, 0)
 	pointer.rotation = direction.angle()
@@ -36,7 +38,7 @@ func track_target() -> void:
 	# Move the character
 	# Note: Moving by 'global_position' is usually wrong (that's teleporting).
 	# You usually want to move by direction * speed.
-	velocity = direction * status.max_speed
+	velocity = direction * (status.max_speed * intensity)
 	move_and_slide()
 
 func get_object_reference(object: Node2D) -> void:
@@ -50,3 +52,20 @@ func remove_object_reference(object: Node2D) -> void:
 		current_target = null
 		# Optional: Reset velocity when target is lost
 		velocity = Vector2.ZERO
+
+
+# Returns a value between 0.0 (stopped) and 1.0 (full speed)
+func get_arrival_intensity(target: Node2D) -> float:
+	# The distance (in pixels) where the enemy starts hitting the brakes
+	var slow_down_radius := 200.0 
+	
+	# Calculate pure distance
+	var distance := global_position.distance_to(target.global_position)
+	
+	# Calculate intensity: 
+	# If distance is 0 (touching), intensity is 0.
+	# If distance is 200 (radius), intensity is 1.
+	var intensity := distance / slow_down_radius
+	
+	# Clamp ensures we never go above 1.0 (overspeeding) or below 0.0 (reversing)
+	return clampf(intensity, 0.0, 1.0)

@@ -12,6 +12,7 @@ metadata/_custom_type_script = "uid://b600652vmp2a4"
 [sub_resource type="CircleShape2D" id="CircleShape2D_he325"]
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
+motion_mode = 1
 script = ExtResource("1_3eadt")
 status = SubResource("Resource_tory2")
 
