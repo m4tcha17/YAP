@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://qwe311yt1jt3"]
+
+[ext_resource type="PackedScene" uid="uid://bkfenph3aywwn" path="res://characters/player.tscn" id="1_a4k3g"]
+[ext_resource type="PackedScene" uid="uid://bkscn8bauj4om" path="res://characters/pena.tscn" id="2_npy7o"]
+[ext_resource type="PackedScene" uid="uid://b44j5ok564aj2" path="res://characters/godwin.tscn" id="3_u6rxl"]
+[ext_resource type="PackedScene" uid="uid://4sfa6ckkindb" path="res://characters/chester.tscn" id="4_k2wcb"]
+
+[node name="Playground" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_a4k3g")]
+position = Vector2(312, 319)
+
+[node name="Pena" parent="." instance=ExtResource("2_npy7o")]
+position = Vector2(779, 403)
+
+[node name="Godwin" parent="." instance=ExtResource("3_u6rxl")]
+position = Vector2(1003, 299)
+
+[node name="Chester" parent="." instance=ExtResource("4_k2wcb")]
+position = Vector2(790, 177)

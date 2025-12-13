@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b44j5ok564aj2"]
+
+[ext_resource type="Texture2D" uid="uid://be42htnykrbrm" path="res://base/diamond.png" id="1_yu4wx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_he325"]
+
+[node name="Godwin" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0.46207666, 0.80714935, 1)
+texture = ExtResource("1_yu4wx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-0.99999994, -1.9999999)
+scale = Vector2(7, 7)
+shape = SubResource("CircleShape2D_he325")

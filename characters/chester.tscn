@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://4sfa6ckkindb"]
+
+[ext_resource type="Texture2D" uid="uid://b4xf21pe0u7dk" path="res://base/circle.png" id="1_i5gbf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_he325"]
+
+[node name="Chester" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.6392157, 0.6431373, 1, 1)
+texture = ExtResource("1_i5gbf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-0.99999994, -1.9999999)
+scale = Vector2(7, 7)
+shape = SubResource("CircleShape2D_he325")
