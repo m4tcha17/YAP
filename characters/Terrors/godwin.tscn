@@ -1,17 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://b44j5ok564aj2"]
+[gd_scene load_steps=4 format=3 uid="uid://b44j5ok564aj2"]
 
+[ext_resource type="Script" uid="uid://cqq7t6udhj87h" path="res://characters/scripts/terror.gd" id="1_f2tlt"]
 [ext_resource type="Texture2D" uid="uid://be42htnykrbrm" path="res://base/diamond.png" id="1_yu4wx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_he325"]
 
 [node name="Godwin" type="CharacterBody2D"]
+script = ExtResource("1_f2tlt")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.99999994, -1.9999999)
+scale = Vector2(7, 7)
+shape = SubResource("CircleShape2D_he325")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0, 0.46207666, 0.80714935, 1)
 texture = ExtResource("1_yu4wx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(-0.99999994, -1.9999999)
 scale = Vector2(7, 7)
 shape = SubResource("CircleShape2D_he325")
