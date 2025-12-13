@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bx8t1xnij2lpt"
-path="res://.godot/imported/square.png-8df17cc708e82dd523c617cb83875139.ctex"
+uid="uid://be42htnykrbrm"
+path="res://.godot/imported/diamond.png-b02a0a46b7c0b7b1a6d2a1e5e2cf59c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://base/square.png"
-dest_files=["res://.godot/imported/square.png-8df17cc708e82dd523c617cb83875139.ctex"]
+source_file="res://assets/base/diamond.png"
+dest_files=["res://.godot/imported/diamond.png-b02a0a46b7c0b7b1a6d2a1e5e2cf59c7.ctex"]
 
 [params]
 
