@@ -10,7 +10,6 @@ var pointer: RayCast2D = null
 func _ready() -> void:
 	if not status:
 		status = BASE.new()
-	status.max_speed = 501
 	# 1. Create the Raycast ONCE when the game starts
 	pointer = RayCast2D.new()
 	add_child(pointer)
@@ -63,9 +62,8 @@ func get_arrival_intensity(target: Node2D) -> float:
 	var distance := global_position.distance_to(target.global_position)
 	
 	# Calculate intensity: 
-	# If distance is 0 (touching), intensity is 0.
-	# If distance is 200 (radius), intensity is 1.
-	var intensity := distance / slow_down_radius
+	# If distance is 200 (radius), intensity >= 1.
+	var intensity := distance / slow_down_radius - 0.2
 	
-	# Clamp ensures we never go above 1.0 (overspeeding) or below 0.0 (reversing)
-	return clampf(intensity, 0.0, 1.0)
+	# Clamp ensures we never go above 1.0 (overspeeding) or below -1.0 (reversing)
+	return clampf(intensity, -1.0, 1.0)
