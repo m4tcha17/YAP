@@ -78,20 +78,24 @@ sources/3 = SubResource("TileSetAtlasSource_ipdnw")
 texture = ExtResource("3_k2wcb")
 2:4/size_in_atlas = Vector2i(14, 10)
 2:4/0 = 0
+2:4/0/z_index = 1
 2:4/0/y_sort_origin = 70
 2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-36.99425, 53.27297, 42.200325, 52.04528, 42.262474, 75.52702, -37.771282, 75.91554)
 55:3/size_in_atlas = Vector2i(5, 11)
 55:3/0 = 0
+55:3/0/z_index = 2
 55:3/0/y_sort_origin = 70
 55:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24.672997, 54.652916, 25.990955, 54.295372, 26.166214, 73.924416, -24.672997, 73.580925)
 36:41/size_in_atlas = Vector2i(24, 20)
 36:41/0 = 0
 53:18/size_in_atlas = Vector2i(10, 4)
 53:18/0 = 0
+53:18/0/z_index = 1
 53:18/0/y_sort_origin = 20
 53:18/0/physics_layer_0/polygon_0/points = PackedVector2Array(-74.54335, 11.570602, 77.39222, 11.366055, 75.20084, 18.67065, -74.03202, 18.787518)
 48:28/size_in_atlas = Vector2i(3, 3)
 48:28/0 = 0
+48:28/0/z_index = 1
 48:28/0/y_sort_origin = 10
 48:28/0/physics_layer_0/polygon_0/points = PackedVector2Array(-74.54335, 11.570602, 77.39222, 11.366055, 75.20084, 18.67065, -74.03202, 18.787518)
 
@@ -124,8 +128,8 @@ tile_set = SubResource("TileSet_fikvc")
 metadata/_edit_lock_ = true
 
 [node name="Props" type="TileMapLayer" parent="Environment"]
-scale = Vector2(0.15, 0.15)
-tile_map_data = PackedByteArray("AAAGAAIAAAACAAQAAAA=")
+scale = Vector2(0.1, 0.1)
+tile_map_data = PackedByteArray("AAALAAoAAAAkACkAAAAOAAgAAAAwABwAAAALAAgAAAA1ABIAAAAHAAYAAAA3AAMAAAALAAUAAAACAAQAAAA=")
 tile_set = SubResource("TileSet_u6rxl")
 
 [node name="Player" parent="Environment" instance=ExtResource("1_a4k3g")]
