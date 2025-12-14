@@ -90,7 +90,6 @@ texture = ExtResource("3_k2wcb")
 36:41/0 = 0
 53:18/size_in_atlas = Vector2i(10, 4)
 53:18/0 = 0
-53:18/0/z_index = 1
 53:18/0/y_sort_origin = 20
 53:18/0/physics_layer_0/polygon_0/points = PackedVector2Array(-74.54335, 11.570602, 77.39222, 11.366055, 75.20084, 18.67065, -74.03202, 18.787518)
 48:28/size_in_atlas = Vector2i(3, 3)
@@ -133,13 +132,13 @@ tile_map_data = PackedByteArray("AAALAAgAAAAkACkAAAAHAAQAAAA3AAMAAAALAAMAAAACAAQ
 tile_set = SubResource("TileSet_u6rxl")
 
 [node name="Player" parent="Environment" instance=ExtResource("1_a4k3g")]
-position = Vector2(167, 87)
+position = Vector2(32, -48)
 
 [node name="Pena" parent="Environment" instance=ExtResource("2_npy7o")]
 position = Vector2(345, 4)
 
 [node name="Godwin" parent="Environment" instance=ExtResource("3_u6rxl")]
-position = Vector2(328, 157)
+position = Vector2(42, 38)
 
 [node name="Chester" parent="Environment" instance=ExtResource("4_k2wcb")]
 position = Vector2(168, 213)
