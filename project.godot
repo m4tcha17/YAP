@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="Game"
-run/main_scene="uid://qwe311yt1jt3"
+run/main_scene="uid://cp3gpekdfc4u1"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="uid://h42ob2kvnhvq"
+config/icon="uid://c310l5djhlxt1"
 
 [display]
 

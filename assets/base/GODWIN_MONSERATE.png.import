@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clfa61q744oqx"
-path="res://.godot/imported/Screenshot 2025-12-14 at 10.41.16 PM.png-50e77e8826e2597e8c1502faf1645b83.ctex"
+uid="uid://dbwt0b04rln6e"
+path="res://.godot/imported/GODWIN_MONSERATE.png-ef664969b715fd3de596107b48c587fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Screenshot 2025-12-14 at 10.41.16 PM.png"
-dest_files=["res://.godot/imported/Screenshot 2025-12-14 at 10.41.16 PM.png-50e77e8826e2597e8c1502faf1645b83.ctex"]
+source_file="res://assets/base/GODWIN_MONSERATE.png"
+dest_files=["res://.godot/imported/GODWIN_MONSERATE.png-ef664969b715fd3de596107b48c587fa.ctex"]
 
 [params]
 
