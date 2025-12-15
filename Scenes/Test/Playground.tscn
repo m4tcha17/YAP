@@ -61,4 +61,3 @@ position = Vector2(168, 213)
 
 [node name="Portal" parent="Portals" instance=ExtResource("8_fikvc")]
 position = Vector2(34.05655, -61.791782)
-scene_name = "lobby"

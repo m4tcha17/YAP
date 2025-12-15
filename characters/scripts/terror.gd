@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var field: Area2D = $Field
 @export var status: BASE
 
@@ -38,6 +39,8 @@ func track_target() -> void:
 	# Note: Moving by 'global_position' is usually wrong (that's teleporting).
 	# You usually want to move by direction * speed.
 	velocity = direction * (status.max_speed * intensity)
+	
+	sprite_2d.flip_h = true if velocity.x < 0 else false
 	move_and_slide()
 
 func get_object_reference(object: Node2D) -> void:

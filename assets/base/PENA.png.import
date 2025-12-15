@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dryc21ds0vsni"
-path="res://.godot/imported/godwin.png-a3d0c7299f72843ba159bf35a30e9bcb.ctex"
+uid="uid://bhw1tncxm0isq"
+path="res://.godot/imported/PENA.png-dcad3e82364f8a60dd306be5a206d56d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/base/godwin.png"
-dest_files=["res://.godot/imported/godwin.png-a3d0c7299f72843ba159bf35a30e9bcb.ctex"]
+source_file="res://assets/base/PENA.png"
+dest_files=["res://.godot/imported/PENA.png-dcad3e82364f8a60dd306be5a206d56d.ctex"]
 
 [params]
 
