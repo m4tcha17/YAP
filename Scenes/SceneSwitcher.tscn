@@ -8,3 +8,17 @@ script = ExtResource("1_l8gqp")
 
 [node name="Lobby" parent="." instance=ExtResource("2_gr0aa")]
 unique_name_in_owner = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 11.151047
+offset_top = -30.901482
+offset_right = 51.151047
+offset_bottom = -7.9014816
+text = "TEXT"

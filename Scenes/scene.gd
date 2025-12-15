@@ -1,9 +1,13 @@
 extends Node
 
 @onready var current_scene: Node2D = $Lobby
+@onready var label: Label = $Control/Label
 
 func _ready() -> void:
 	connect_level_signals(current_scene)
+
+func _process(_delta: float) -> void:
+	label.text = str(Engine.get_frames_per_second())
 
 func connect_level_signals(level_node: Node) -> void:
 	var portals_container = level_node.find_child("Portals")

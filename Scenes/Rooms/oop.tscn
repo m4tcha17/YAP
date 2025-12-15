@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://bef776ro7ck0q"]
+[gd_scene load_steps=8 format=4 uid="uid://bef776ro7ck0q"]
 
 [ext_resource type="TileSet" uid="uid://byn51vmwi8h8d" path="res://Scenes/Tileset/Groundbase/floor.tres" id="1_i0xqw"]
 [ext_resource type="TileSet" uid="uid://bl808hwuwn3vm" path="res://Scenes/Tileset/Groundbase/wall.tres" id="2_mmiio"]
@@ -6,6 +6,7 @@
 [ext_resource type="TileSet" uid="uid://ikul50otpb2g" path="res://Scenes/Tileset/Environment/props.tres" id="4_i50dk"]
 [ext_resource type="PackedScene" uid="uid://bkfenph3aywwn" path="res://characters/player.tscn" id="5_mmiio"]
 [ext_resource type="PackedScene" uid="uid://buvyemd7p3co" path="res://Objects/Portal.tscn" id="5_o8jy6"]
+[ext_resource type="PackedScene" uid="uid://4sfa6ckkindb" path="res://characters/Terrors/chester.tscn" id="6_hih0q"]
 
 [node name="OOP" type="Node2D"]
 
@@ -19,16 +20,19 @@ tile_set = ExtResource("1_i0xqw")
 tile_map_data = PackedByteArray("AAD/////AAAMAAwAAAD//wAAAAAMAAwAAAD//wEAAAAMAAwAAAD//wIAAAAMAAwAAAD//wMAAAAMAAwAAAD//wQAAAAMAAwAAAD//wUAAAAMAAwAAAD//wYAAAAMAAwAAAAAAAYAAAAMAAwAAAABAAYAAAAMAAwAAAACAAYAAAAMAAwAAAADAAYAAAAMAAwAAAAEAAYAAAAMAAwAAAAFAAYAAAAMAAwAAAAGAAYAAAAMAAwAAAAHAAYAAAAMAAwAAAAIAAYAAAAMAAwAAAAJAAYAAAAMAAwAAAAKAAYAAAAMAAwAAAAKAAUAAAAMAAwAAAAKAAQAAAAMAAwAAAAKAAMAAAAMAAwAAAAKAAIAAAAMAAwAAAAKAAEAAAAMAAwAAAAKAAAAAAAMAAwAAAAKAP//AAAMAAwAAAAJAP//AAAMAAwAAAAIAP//AAAMAAwAAAAHAP//AAAMAAwAAAAGAP//AAAMAAwAAAAFAP//AAAMAAwAAAAEAP//AAAMAAwAAAADAP//AAAMAAwAAAACAP//AAAMAAwAAAABAP//AAAMAAwAAAAAAP//AAAMAAwAAAA=")
 tile_set = ExtResource("2_mmiio")
 
-[node name="GroundBase2" type="Node2D" parent="."]
+[node name="Environment" type="Node2D" parent="."]
 
-[node name="Furniture" type="TileMapLayer" parent="GroundBase2"]
+[node name="Furniture" type="TileMapLayer" parent="Environment"]
 tile_set = ExtResource("3_hih0q")
 
-[node name="Props" type="TileMapLayer" parent="GroundBase2"]
+[node name="Props" type="TileMapLayer" parent="Environment"]
 tile_set = ExtResource("4_i50dk")
 
-[node name="Player" parent="GroundBase2" instance=ExtResource("5_mmiio")]
+[node name="Player" parent="Environment" instance=ExtResource("5_mmiio")]
 position = Vector2(64, 384)
+
+[node name="Chester" parent="Environment" instance=ExtResource("6_hih0q")]
+position = Vector2(32, 32)
 
 [node name="Portals" type="Node2D" parent="."]
 
