@@ -1,7 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://bmsfdflxgf6q5"]
+[gd_scene load_steps=3 format=3 uid="uid://bmsfdflxgf6q5"]
 
 [ext_resource type="PackedScene" uid="uid://bkfenph3aywwn" path="res://characters/player.tscn" id="1_v1w2c"]
+[ext_resource type="PackedScene" uid="uid://buvyemd7p3co" path="res://Objects/Portal.tscn" id="2_2gyqw"]
 
 [node name="EmptySpace" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_v1w2c")]
+
+[node name="Portals" type="Node2D" parent="."]
+
+[node name="Portal" parent="Portals" instance=ExtResource("2_2gyqw")]
+position = Vector2(123.33203, 60.59355)
+scene_name = "playground"

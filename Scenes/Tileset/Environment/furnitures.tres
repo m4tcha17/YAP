@@ -1,0 +1,28 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dln1s0mfo1msf"]
+
+[ext_resource type="Texture2D" uid="uid://f2j5vi5pur61" path="res://assets/2dClassroomAssetPackByStyloo/Classroom/Classroom First Spritesheet 1.png" id="1_kbvxa"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x7xkg"]
+texture = ExtResource("1_kbvxa")
+1:9/size_in_atlas = Vector2i(38, 17)
+1:9/0 = 0
+1:9/0/y_sort_origin = 100
+1:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-289.47723, 69.36646, 283.83594, 70.43908, 284.90857, 101.54493, -290.04932, 99.632965)
+47:3/size_in_atlas = Vector2i(12, 10)
+47:3/0 = 0
+47:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-103.75238, 71.74577, 101.05353, 70.55504, 101.05353, 108.65846, -103.75238, 108.261566)
+47:32/size_in_atlas = Vector2i(15, 15)
+47:32/0 = 0
+47:32/0/y_sort_origin = 100
+47:32/0/physics_layer_0/polygon_0/points = PackedVector2Array(-101.87875, 72.440765, 98.29385, 72.9069, 98.778076, 99.05403, -101.01422, 100.97098)
+2:41/size_in_atlas = Vector2i(10, 9)
+2:41/0 = 0
+2:41/0/physics_layer_0/polygon_0/points = PackedVector2Array(-61.48139, -20.337502, 59.576363, -19.543678, 59.973274, 0.698761, -61.8783, 0.301857)
+50:53/size_in_atlas = Vector2i(10, 9)
+50:53/0 = 0
+50:53/0/physics_layer_0/polygon_0/points = PackedVector2Array(-61.28293, -22.718964, 63.743927, -21.92514, 64.53775, -5.254898, -60.886017, -5.254898)
+
+[resource]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/2 = SubResource("TileSetAtlasSource_x7xkg")
