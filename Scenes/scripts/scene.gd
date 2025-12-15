@@ -28,11 +28,11 @@ func handle_scene_change(current_scene_name: String, entry_tag: String):
 		"lobby":
 			match entry_tag:
 				"to_oop":
-					next_scene_name = "Rooms/OOP"
+					next_scene_name = "Rooms/oop"
 				"to_dsa":
-					next_scene_name = "Rooms/DSA"
+					next_scene_name = "Rooms/dsa"
 				"to_networking":
-					next_scene_name = "Rooms/Networking"
+					next_scene_name = "Rooms/networking"
 				_:
 					print("Error: Unknown tag in Lobby: " + entry_tag)
 					return
@@ -42,12 +42,12 @@ func handle_scene_change(current_scene_name: String, entry_tag: String):
 		# -----------------------------------------------------------
 		"oop":
 			# If we leave OOP, we usually go back to Lobby
-			next_scene_name = "Rooms/Lobby"
+			next_scene_name = "Rooms/lobby"
 		"dsa":
-			next_scene_name = "Rooms/Lobby"
+			next_scene_name = "Rooms/lobby"
 			
 		"networking":
-			next_scene_name = "Rooms/Lobby"
+			next_scene_name = "Rooms/lobby"
 
 		# -----------------------------------------------------------
 		# CASE 3: OTHER SCENES
