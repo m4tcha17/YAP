@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://buvyemd7p3co"]
 
-[ext_resource type="Texture2D" uid="uid://sf50mc41b4ct" path="res://assets/time_cooldown.png" id="1_0u27h"]
+[ext_resource type="Texture2D" uid="uid://sf50mc41b4ct" path="res://assets/base/time_cooldown.png" id="1_0u27h"]
 [ext_resource type="Script" uid="uid://bqmidj4bjnwe3" path="res://Objects/portal.gd" id="1_y6olh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cesbb"]

@@ -16,6 +16,7 @@ texture = ExtResource("1_rsd8p")
 36:41/size_in_atlas = Vector2i(24, 20)
 36:41/0 = 0
 36:41/0/y_sort_origin = -100
+36:41/0/physics_layer_0/polygon_0/points = PackedVector2Array(-175.19873, -73.36842, 186.58344, -73.36842, 185.95099, -41.111618, -175.19873, -40.479126)
 53:18/size_in_atlas = Vector2i(10, 4)
 53:18/0 = 0
 53:18/0/y_sort_origin = 20

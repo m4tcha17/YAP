@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sf50mc41b4ct"
-path="res://.godot/imported/time_cooldown.png-220245c24d63f833f5cc2c45f605931c.ctex"
+uid="uid://hr2hkmn3tw58"
+path="res://.godot/imported/basic_tiles.png-34b946a3e5ecd6a0c3b809a569e48a50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/time_cooldown.png"
-dest_files=["res://.godot/imported/time_cooldown.png-220245c24d63f833f5cc2c45f605931c.ctex"]
+source_file="res://assets/base/basic_tiles.png"
+dest_files=["res://.godot/imported/basic_tiles.png-34b946a3e5ecd6a0c3b809a569e48a50.ctex"]
 
 [params]
 

@@ -21,18 +21,23 @@ tile_map_data = PackedByteArray("AAD/////AAAMAAwAAAD//wAAAAAMAAwAAAD//wEAAAAMAAw
 tile_set = ExtResource("2_ci8rb")
 
 [node name="Environment" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="Furniture" type="TileMapLayer" parent="Environment"]
+y_sort_enabled = true
 tile_set = ExtResource("3_ijnls")
 
 [node name="Props" type="TileMapLayer" parent="Environment"]
+y_sort_enabled = true
+scale = Vector2(0.1, 0.1)
+tile_map_data = PackedByteArray("AACvABEAAAA3AAMAAACzABAAAAACAAQAAACzABMAAAA1ABIAAACzABUAAAAkACkAAAC3ABMAAAAwABwAAACQACMAAAAkACkAAACRADcAAAAkACkAAAClACMAAAAkACkAAAClADYAAAAkACkAAACRAEsAAAAkACkAAAClAEsAAAAkACkAAAByACMAAAAkACkAAABeACMAAAAkACkAAABeADcAAAAkACkAAABzADcAAAAkACkAAABeAEsAAAAkACkAAABzAEsAAAAkACkAAABKACMAAAAkACkAAABKADcAAAAkACkAAABKAEsAAAAkACkAAAAsACMAAAAkACkAAAAYACMAAAAkACkAAAAYADcAAAAkACkAAAAtADcAAAAkACkAAAAZAEsAAAAkACkAAAAtAEsAAAAkACkAAAA=")
 tile_set = ExtResource("4_itvof")
 
 [node name="Player" parent="Environment" instance=ExtResource("5_c37yu")]
-position = Vector2(561.4514, 297.0622)
+position = Vector2(576, 384)
 
 [node name="Pena" parent="Environment" instance=ExtResource("6_ci8rb")]
-position = Vector2(576, 32)
+position = Vector2(574.64545, 32.541824)
 
 [node name="Portals" type="Node2D" parent="."]
 

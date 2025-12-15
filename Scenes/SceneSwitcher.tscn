@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://kj6d1ahimjwb"]
 
-[ext_resource type="Script" uid="uid://deh7bv4uh0vof" path="res://Scenes/scene.gd" id="1_l8gqp"]
+[ext_resource type="Script" uid="uid://deh7bv4uh0vof" path="res://Scenes/scripts/scene.gd" id="1_l8gqp"]
 [ext_resource type="PackedScene" uid="uid://cultbrcvpd3hb" path="res://Scenes/Rooms/lobby.tscn" id="2_gr0aa"]
 
 [node name="SceneSwitcher" type="Node"]
@@ -9,16 +9,11 @@ script = ExtResource("1_l8gqp")
 [node name="Lobby" parent="." instance=ExtResource("2_gr0aa")]
 unique_name_in_owner = true
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Control" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 11.151047
-offset_top = -30.901482
-offset_right = 51.151047
-offset_bottom = -7.9014816
+offset_left = 9.249741
+offset_top = 4.408409
+offset_right = 49.24974
+offset_bottom = 27.40841
 text = "TEXT"
