@@ -27,9 +27,21 @@ window/stretch/scale_mode="integer"
 
 enabled=PackedStringArray()
 
+[file_customization]
+
+folder_colors={
+"res://Objects/": "green",
+"res://Resources/": "yellow",
+"res://Scenes/": "purple",
+"res://assets/": "red",
+"res://characters/": "blue",
+"res://util/": "gray"
+}
+
 [global_group]
 
 player=""
+bullet=""
 
 [input]
 

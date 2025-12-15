@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://cey67fngsrjjp"]
+[gd_scene load_steps=9 format=4 uid="uid://cey67fngsrjjp"]
 
 [ext_resource type="TileSet" uid="uid://byn51vmwi8h8d" path="res://Scenes/Tileset/Groundbase/floor.tres" id="1_4ncre"]
 [ext_resource type="TileSet" uid="uid://bl808hwuwn3vm" path="res://Scenes/Tileset/Groundbase/wall.tres" id="2_ci8rb"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bkfenph3aywwn" path="res://characters/player.tscn" id="5_c37yu"]
 [ext_resource type="PackedScene" uid="uid://buvyemd7p3co" path="res://Objects/Portal.tscn" id="6_137en"]
 [ext_resource type="PackedScene" uid="uid://bkscn8bauj4om" path="res://characters/Terrors/pena.tscn" id="6_ci8rb"]
+[ext_resource type="PackedScene" uid="uid://dox3r4ggjkamt" path="res://Objects/Items/notebook.tscn" id="7_ijnls"]
 
 [node name="dsa" type="Node2D"]
 
@@ -38,6 +39,21 @@ position = Vector2(576, 384)
 
 [node name="Pena" parent="Environment" instance=ExtResource("6_ci8rb")]
 position = Vector2(574.64545, 32.541824)
+
+[node name="Notebook" parent="Environment" instance=ExtResource("7_ijnls")]
+position = Vector2(143.0829, 116.6228)
+
+[node name="Notebook2" parent="Environment" instance=ExtResource("7_ijnls")]
+position = Vector2(239.63115, 185.81047)
+
+[node name="Notebook3" parent="Environment" instance=ExtResource("7_ijnls")]
+position = Vector2(368.5718, 125.11401)
+
+[node name="Notebook4" parent="Environment" instance=ExtResource("7_ijnls")]
+position = Vector2(301.90005, 253.74017)
+
+[node name="Notebook5" parent="Environment" instance=ExtResource("7_ijnls")]
+position = Vector2(467.95047, 188.32639)
 
 [node name="Portals" type="Node2D" parent="."]
 

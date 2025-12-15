@@ -3,8 +3,10 @@ extends Resource
 
 @export_range(100, 2000) var max_speed: float = 100
 @export_range(50, 2000) var speed: float = 50
-@export_range(0, 1000) var attack: int
+@export_range(0, 1000) var attack: int = 100
 @export_range(0, 1000) var dexterity: int
+
+@export_range(0, 1000) var health : int = 100
 
 
 @export var ground_fiction_factor := 10.0

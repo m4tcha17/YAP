@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://cjkau7rsuc2x4"]
+[gd_scene load_steps=9 format=4 uid="uid://cjkau7rsuc2x4"]
 
 [ext_resource type="TileSet" uid="uid://byn51vmwi8h8d" path="res://Scenes/Tileset/Groundbase/floor.tres" id="1_cghg3"]
 [ext_resource type="TileSet" uid="uid://bl808hwuwn3vm" path="res://Scenes/Tileset/Groundbase/wall.tres" id="2_ql1kw"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://buvyemd7p3co" path="res://Objects/Portal.tscn" id="5_qe4je"]
 [ext_resource type="PackedScene" uid="uid://bkfenph3aywwn" path="res://characters/player.tscn" id="5_ql1kw"]
 [ext_resource type="PackedScene" uid="uid://b44j5ok564aj2" path="res://characters/Terrors/godwin.tscn" id="6_xmand"]
+[ext_resource type="PackedScene" uid="uid://b1dpcsx2rbpmu" path="res://Objects/Items/network.tscn" id="7_2val7"]
 
 [node name="Networking" type="Node2D"]
 
@@ -39,6 +40,21 @@ position = Vector2(320, 0)
 
 [node name="Godwin" parent="Environment" instance=ExtResource("6_xmand")]
 position = Vector2(32, 32)
+
+[node name="Network" parent="Environment" instance=ExtResource("7_2val7")]
+position = Vector2(92.63365, 202.12871)
+
+[node name="Network2" parent="Environment" instance=ExtResource("7_2val7")]
+position = Vector2(48.148544, 347.49963)
+
+[node name="Network3" parent="Environment" instance=ExtResource("7_2val7")]
+position = Vector2(597.063, 351.47156)
+
+[node name="Network4" parent="Environment" instance=ExtResource("7_2val7")]
+position = Vector2(325.3861, 210.86682)
+
+[node name="Network5" parent="Environment" instance=ExtResource("7_2val7")]
+position = Vector2(589.11926, 67.084625)
 
 [node name="Portals" type="Node2D" parent="."]
 

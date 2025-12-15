@@ -2,13 +2,16 @@ extends CharacterBody2D
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-@export var status : BASE
+
+@export var status : CharacterData
+
 
 var steering_factor := 10.0
 
 func _ready() -> void:
 	if not status:
-		status = BASE.new()
+		status = CharacterData.new()
+
 
 
 func _physics_process(delta: float) -> void:

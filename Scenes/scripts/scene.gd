@@ -1,7 +1,10 @@
 extends Node
 
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
 @onready var current_scene: Node2D = $Lobby
 @onready var label: Label = $Control/Label
+var next_scene
 
 func _ready() -> void:
 	connect_level_signals(current_scene)
@@ -63,7 +66,7 @@ func handle_scene_change(current_scene_name: String, entry_tag: String):
 	var scene_resource = load("res://Scenes/" + next_scene_name + ".tscn")
 	
 	if scene_resource:
-		var next_scene = scene_resource.instantiate()
+		next_scene = scene_resource.instantiate()
 		add_child(next_scene)
 		
 		# --- POSITIONING LOGIC ---
@@ -75,9 +78,15 @@ func handle_scene_change(current_scene_name: String, entry_tag: String):
 			player.global_position = spawn_marker.global_position
 		else:
 			print("Warning: Missing Marker named '" + entry_tag + "' in " + next_scene_name)
-
-		connect_level_signals(next_scene)
-		current_scene.queue_free()
-		current_scene = next_scene
+		animation_player.play("fade_in")
 	else:
 		print("Error: Could not load scene: " + next_scene_name)
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	match anim_name:
+		"fade_in":
+			connect_level_signals(next_scene)
+			current_scene.queue_free()
+			current_scene = next_scene
+			next_scene = null
+			animation_player.play("fade_out")
