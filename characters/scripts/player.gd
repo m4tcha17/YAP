@@ -10,7 +10,6 @@ extends CharacterBody2D
 var steering_factor := 10.0
 
 func _ready() -> void:
-	status.health_changed.connect(heal)
 	if not status:
 		status = CharacterData.new()
 
@@ -35,8 +34,3 @@ func _physics_process(delta: float) -> void:
 		animation.loop_mode = Animation.LOOP_NONE
 	
 	sprite_2d.flip_h = true if velocity.x < 0 else false
-
-
-func heal(new_health: int):
-	status.health = new_health
-	

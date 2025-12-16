@@ -2,7 +2,8 @@ extends CharacterBody2D
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var field: Area2D = $Field
-@export var status: BASE
+@onready var hitbox: Area2D = $HitBox
+@export var status: EnemyData
 
 # We will store the variables directly here to avoid "status" confusion
 var current_target: Node2D = null
@@ -10,7 +11,7 @@ var pointer: RayCast2D = null
 
 func _ready() -> void:
 	if not status:
-		status = BASE.new()
+		status = EnemyData.new()
 	# 1. Create the Raycast ONCE when the game starts
 	pointer = RayCast2D.new()
 	add_child(pointer)
@@ -19,7 +20,7 @@ func _ready() -> void:
 	# 2. Connect signals
 	field.body_entered.connect(get_object_reference)
 	field.body_exited.connect(remove_object_reference)
-
+	hitbox.body_entered.connect(attack)
 
 func _physics_process(_delta: float) -> void:
 	# Only run if we actually have a valid target
@@ -38,7 +39,7 @@ func track_target() -> void:
 	# Move the character
 	# Note: Moving by 'global_position' is usually wrong (that's teleporting).
 	# You usually want to move by direction * speed.
-	velocity = direction * (status.max_speed * intensity)
+	velocity = direction * (status.speed * intensity)
 	
 	sprite_2d.flip_h = true if velocity.x < 0 else false
 	move_and_slide()
@@ -70,3 +71,7 @@ func get_arrival_intensity(target: Node2D) -> float:
 	
 	# Clamp ensures we never go above 1.0 (overspeeding) or below -1.0 (reversing)
 	return clampf(intensity, -1.0, 1.0)
+
+func attack(body: Node) -> void:
+	if body.is_in_group("player"):
+		body.status.health -= 10
