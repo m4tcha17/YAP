@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var field: Area2D = $Field
+@onready var hitbox: Area2D = $HitBox
 @export var status: BASE
 
 # We will store the variables directly here to avoid "status" confusion
@@ -19,7 +20,7 @@ func _ready() -> void:
 	# 2. Connect signals
 	field.body_entered.connect(get_object_reference)
 	field.body_exited.connect(remove_object_reference)
-
+	hitbox.body_entered.connect(attack)
 
 func _physics_process(_delta: float) -> void:
 	# Only run if we actually have a valid target
@@ -70,3 +71,7 @@ func get_arrival_intensity(target: Node2D) -> float:
 	
 	# Clamp ensures we never go above 1.0 (overspeeding) or below -1.0 (reversing)
 	return clampf(intensity, -1.0, 1.0)
+
+func attack(body: Node) -> void:
+	if body.is_in_group("player"):
+		body.status.health -= 10

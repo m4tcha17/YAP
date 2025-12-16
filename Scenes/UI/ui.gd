@@ -7,6 +7,7 @@ func _ready() -> void:
 	#initial current player
 	player = owner.find_child("Player")
 	#Update current player when accessing to another scene
+	
 	owner.player_changed.connect(updatePlayer)
 	player.status.health_changed.connect(updateHealth)
 	health_bar.value = player.status.health

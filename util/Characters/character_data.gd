@@ -17,7 +17,7 @@ signal died
 @export_range(0, 1000) var health: int = 100:
 	set(value):
 		# Clamp value so it never goes below 0
-		var clamped_value = clampi(value, 0, 1000)
+		var clamped_value = clampi(value, 0, 100)
 		# Only update if the value is actually different
 		if health != clamped_value:
 			health = clamped_value
