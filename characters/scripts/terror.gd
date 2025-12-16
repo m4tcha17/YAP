@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var field: Area2D = $Field
 @onready var hitbox: Area2D = $HitBox
-@export var status: BASE
+@export var status: EnemyData
 
 # We will store the variables directly here to avoid "status" confusion
 var current_target: Node2D = null
@@ -11,7 +11,7 @@ var pointer: RayCast2D = null
 
 func _ready() -> void:
 	if not status:
-		status = BASE.new()
+		status = EnemyData.new()
 	# 1. Create the Raycast ONCE when the game starts
 	pointer = RayCast2D.new()
 	add_child(pointer)
@@ -39,7 +39,7 @@ func track_target() -> void:
 	# Move the character
 	# Note: Moving by 'global_position' is usually wrong (that's teleporting).
 	# You usually want to move by direction * speed.
-	velocity = direction * (status.max_speed * intensity)
+	velocity = direction * (status.speed * intensity)
 	
 	sprite_2d.flip_h = true if velocity.x < 0 else false
 	move_and_slide()

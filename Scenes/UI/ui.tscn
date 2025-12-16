@@ -20,3 +20,10 @@ offset_bottom = 10.0
 theme_override_styles/background = SubResource("StyleBoxFlat_ahcct")
 theme_override_styles/fill = SubResource("StyleBoxFlat_de23q")
 show_percentage = false
+
+[node name="Label" type="Label" parent="."]
+offset_left = 108.0
+offset_top = -1.0
+offset_right = 146.0
+offset_bottom = 22.0
+text = "TEXT"
