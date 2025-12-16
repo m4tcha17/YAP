@@ -32,4 +32,5 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		var current_scene_name = owner.name.to_lower()
 		print("Leaving scene: ", current_scene_name)
+		# Notify listeners (e.g., Scene Manager) to load the next level and position the player
 		scene_changed.emit(current_scene_name, entry_tag)

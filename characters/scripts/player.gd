@@ -1,18 +1,18 @@
 extends CharacterBody2D
 
+
+
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 @export var status : CharacterData
 
-
 var steering_factor := 10.0
 
 func _ready() -> void:
+	status.health_changed.connect(heal)
 	if not status:
 		status = CharacterData.new()
-
-
 
 func _physics_process(delta: float) -> void:
 	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -35,3 +35,8 @@ func _physics_process(delta: float) -> void:
 		animation.loop_mode = Animation.LOOP_NONE
 	
 	sprite_2d.flip_h = true if velocity.x < 0 else false
+
+
+func heal(new_health: int):
+	status.health = new_health
+	

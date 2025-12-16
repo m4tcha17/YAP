@@ -6,9 +6,25 @@
 
 [sub_resource type="Resource" id="Resource_tory2"]
 script = ExtResource("2_tory2")
+health = 0
 metadata/_custom_type_script = "uid://cxh3ddfa0awl7"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_he325"]
+
+[sub_resource type="Animation" id="Animation_x0jl3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_tory2"]
 resource_name = "walk"
@@ -25,21 +41,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(-2, -2, 1, 1),
 "update": 0,
 "values": [0.0, -0.05235987755982989, 0.03490658503988659, 0.0]
-}
-
-[sub_resource type="Animation" id="Animation_x0jl3"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_x0jl3"]

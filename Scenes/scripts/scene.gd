@@ -1,23 +1,28 @@
 extends Node
 
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
+signal player_changed(player)
 
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var current_scene: Node2D = $Lobby
-@onready var label: Label = $Control/Label
+@onready var ui: CanvasLayer = $UI
+@onready var player : CharacterBody2D
 var next_scene
 
 func _ready() -> void:
+	# Find initial player (current scene)
+	player = current_scene.find_child("Player")
 	connect_level_signals(current_scene)
 
-func _process(_delta: float) -> void:
-	label.text = str(Engine.get_frames_per_second())
-
+# UPDATES THE CURRENT SCENE
 func connect_level_signals(level_node: Node) -> void:
 	var portals_container = level_node.find_child("Portals")
 	if portals_container:
+		# Listen for scene change requests from all portals in the level
 		for portal in portals_container.get_children():
 			if not portal.scene_changed.is_connected(handle_scene_change):
+				# Connect portals to the manager (Deferred to prevent physics crashes)
 				portal.scene_changed.connect(handle_scene_change, CONNECT_DEFERRED)
+	
 
 func handle_scene_change(current_scene_name: String, entry_tag: String):
 	var next_scene_name: String = ""
@@ -72,10 +77,15 @@ func handle_scene_change(current_scene_name: String, entry_tag: String):
 		# --- POSITIONING LOGIC ---
 		# We look for a Marker2D in the new scene that matches the 'entry_tag'
 		var spawn_marker = next_scene.find_child(entry_tag)
-		var player = next_scene.find_child("Player")
+		var next_player = next_scene.find_child("Player")
 		
-		if spawn_marker and player:
-			player.global_position = spawn_marker.global_position
+		if spawn_marker and next_player:
+			if player and is_instance_valid(player):
+				next_player.status = player.status
+			next_player.global_position = spawn_marker.global_position
+			player = next_player
+			# EMIT SIGNAL (current player has changed)
+			player_changed.emit(player)
 		else:
 			print("Warning: Missing Marker named '" + entry_tag + "' in " + next_scene_name)
 		animation_player.play("fade_in")

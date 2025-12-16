@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://cultbrcvpd3hb"]
+[gd_scene load_steps=6 format=4 uid="uid://cultbrcvpd3hb"]
 
 [ext_resource type="TileSet" uid="uid://byn51vmwi8h8d" path="res://Scenes/Tileset/Groundbase/floor.tres" id="1_o5yrt"]
 [ext_resource type="TileSet" uid="uid://bl808hwuwn3vm" path="res://Scenes/Tileset/Groundbase/wall.tres" id="2_owc2v"]
 [ext_resource type="PackedScene" uid="uid://bkfenph3aywwn" path="res://characters/player.tscn" id="3_0mbbq"]
 [ext_resource type="PackedScene" uid="uid://buvyemd7p3co" path="res://Objects/Portal.tscn" id="4_5g40f"]
+[ext_resource type="PackedScene" uid="uid://cqrgm1hg7odkn" path="res://Objects/Items/healing_item.tscn" id="4_owc2v"]
 
 [node name="Lobby" type="Node2D"]
 
@@ -26,6 +27,9 @@ y_sort_enabled = true
 [node name="Player" parent="Environment" instance=ExtResource("3_0mbbq")]
 y_sort_enabled = true
 position = Vector2(115.70593, 117.61174)
+
+[node name="Heal" parent="Environment" instance=ExtResource("4_owc2v")]
+position = Vector2(179.12256, 134.21529)
 
 [node name="Portals" type="Node2D" parent="."]
 

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://kj6d1ahimjwb"]
+[gd_scene load_steps=8 format=3 uid="uid://kj6d1ahimjwb"]
 
 [ext_resource type="Script" uid="uid://deh7bv4uh0vof" path="res://Scenes/scripts/scene.gd" id="1_l8gqp"]
 [ext_resource type="PackedScene" uid="uid://cultbrcvpd3hb" path="res://Scenes/Rooms/lobby.tscn" id="2_gr0aa"]
+[ext_resource type="PackedScene" uid="uid://gjumwl2wkcy8" path="res://Scenes/UI/ui.tscn" id="3_1hb0s"]
 
 [sub_resource type="Animation" id="Animation_1hb0s"]
 length = 0.001
@@ -61,15 +62,6 @@ script = ExtResource("1_l8gqp")
 [node name="Lobby" parent="." instance=ExtResource("2_gr0aa")]
 unique_name_in_owner = true
 
-[node name="Control" type="CanvasLayer" parent="."]
-
-[node name="Label" type="Label" parent="Control"]
-offset_left = 9.249741
-offset_top = 4.408409
-offset_right = 49.24974
-offset_bottom = 27.40841
-text = "TEXT"
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_2i1kg")
@@ -84,5 +76,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
+
+[node name="UI" parent="." instance=ExtResource("3_1hb0s")]
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
