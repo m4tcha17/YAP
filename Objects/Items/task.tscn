@@ -1,7 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://dox3r4ggjkamt"]
+[gd_scene load_steps=14 format=3 uid="uid://clj047th5hvb7"]
 
-[ext_resource type="Script" uid="uid://camctttuhjl4a" path="res://Objects/Items/task.gd" id="1_b40am"]
-[ext_resource type="Texture2D" uid="uid://bhlk0sq0nscjn" path="res://assets/base/notebook.png" id="2_b40am"]
+[ext_resource type="Script" uid="uid://camctttuhjl4a" path="res://Objects/Items/task.gd" id="1_hub68"]
+[ext_resource type="Texture2D" uid="uid://ckxubvvd66320" path="res://assets/base/bug.png" id="2_lacpi"]
+[ext_resource type="Script" uid="uid://db50oho3xc5ma" path="res://util/Task/task_data.gd" id="2_uwxvi"]
+[ext_resource type="Texture2D" uid="uid://cochw5gqiw3wg" path="res://assets/base/network.png" id="3_geaml"]
+[ext_resource type="Texture2D" uid="uid://bhlk0sq0nscjn" path="res://assets/base/notebook.png" id="4_1i4ph"]
+
+[sub_resource type="Resource" id="Resource_geaml"]
+script = ExtResource("2_uwxvi")
+metadata/_custom_type_script = "uid://db50oho3xc5ma"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gw07d"]
 
@@ -13,6 +20,69 @@ bg_color = Color(1, 1, 0.30588236, 1)
 [sub_resource type="Theme" id="Theme_ye7pd"]
 ProgressBar/styles/background = SubResource("StyleBoxEmpty_gw07d")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_l8vg8")
+
+[sub_resource type="Animation" id="Animation_6e6yp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -25.588161)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.03, 0.03)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:skew")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_b40am"]
 resource_name = "highlight"
@@ -79,82 +149,19 @@ tracks/4/keys = {
 "values": [Color(1, 1, 1, 1), Color(0, 1, 1, 1), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_6e6yp"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -25.588161)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.03, 0.03)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:skew")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:self_modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5a8ol"]
 _data = {
 &"RESET": SubResource("Animation_6e6yp"),
 &"highlight": SubResource("Animation_b40am")
 }
 
-[node name="Notebook" type="Area2D"]
-script = ExtResource("1_b40am")
+[node name="Task" type="Area2D"]
+script = ExtResource("1_hub68")
+status = SubResource("Resource_geaml")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -25.588161)
 scale = Vector2(0.03, 0.03)
-texture = ExtResource("2_b40am")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_gw07d")
@@ -166,9 +173,6 @@ offset_top = -17.087955
 offset_right = 10.0
 offset_bottom = -13.087955
 theme = SubResource("Theme_ye7pd")
-max_value = 150.0
-step = 10.0
-rounded = true
 show_percentage = false
 metadata/_edit_use_anchors_ = true
 

@@ -1,5 +1,8 @@
 extends Area2D
 
+@export var status: Task
+
+@onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var progress_bar: ProgressBar = %ProgressBar
 @onready var timer: Timer = %Timer # This will be our cooldown timer
 
@@ -9,6 +12,7 @@ var can_increment: bool = true # Controls if the progress bar can be increased
 # --- Initialization ---
 
 func _ready() -> void:
+	sprite_2d.texture = status.get_texture()
 	# Connect the signals to detect when a body enters and exits
 	connect("body_entered", _on_body_entered)
 	connect("body_exited", _on_body_exited)

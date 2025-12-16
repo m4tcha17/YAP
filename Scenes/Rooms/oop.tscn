@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://bef776ro7ck0q"]
+[gd_scene load_steps=14 format=4 uid="uid://bef776ro7ck0q"]
 
 [ext_resource type="TileSet" uid="uid://byn51vmwi8h8d" path="res://Scenes/Tileset/Groundbase/floor.tres" id="1_i0xqw"]
 [ext_resource type="TileSet" uid="uid://bl808hwuwn3vm" path="res://Scenes/Tileset/Groundbase/wall.tres" id="2_mmiio"]
@@ -7,7 +7,17 @@
 [ext_resource type="PackedScene" uid="uid://bkfenph3aywwn" path="res://characters/player.tscn" id="5_mmiio"]
 [ext_resource type="PackedScene" uid="uid://buvyemd7p3co" path="res://Objects/Portal.tscn" id="5_o8jy6"]
 [ext_resource type="PackedScene" uid="uid://4sfa6ckkindb" path="res://characters/Terrors/chester.tscn" id="6_hih0q"]
-[ext_resource type="PackedScene" uid="uid://ybx0nw0f4rjn" path="res://Objects/Items/program.tscn" id="7_i50dk"]
+[ext_resource type="PackedScene" uid="uid://clj047th5hvb7" path="res://Objects/Items/task.tscn" id="7_ksn7p"]
+[ext_resource type="Script" uid="uid://db50oho3xc5ma" path="res://util/Task/task_data.gd" id="8_x2tff"]
+[ext_resource type="Texture2D" uid="uid://cochw5gqiw3wg" path="res://assets/base/network.png" id="9_77v5p"]
+[ext_resource type="Texture2D" uid="uid://bhlk0sq0nscjn" path="res://assets/base/notebook.png" id="10_rojhf"]
+[ext_resource type="Texture2D" uid="uid://ckxubvvd66320" path="res://assets/base/bug.png" id="11_fadnc"]
+
+[sub_resource type="Resource" id="Resource_t6ghf"]
+script = ExtResource("8_x2tff")
+item_name = "oop"
+icon_type = "bug"
+metadata/_custom_type_script = "uid://db50oho3xc5ma"
 
 [node name="OOP" type="Node2D"]
 
@@ -42,20 +52,28 @@ position = Vector2(64, 384)
 [node name="Chester" parent="Environment" instance=ExtResource("6_hih0q")]
 position = Vector2(34.15866, 32.336216)
 
-[node name="program" parent="Environment" instance=ExtResource("7_i50dk")]
-position = Vector2(82.0281, 144.72424)
+[node name="Task" type="CanvasGroup" parent="Environment"]
+y_sort_enabled = true
 
-[node name="program2" parent="Environment" instance=ExtResource("7_i50dk")]
-position = Vector2(146.1074, 81.187996)
+[node name="Task" parent="Environment/Task" instance=ExtResource("7_ksn7p")]
+position = Vector2(81.781876, 90.57113)
+status = SubResource("Resource_t6ghf")
 
-[node name="program3" parent="Environment" instance=ExtResource("7_i50dk")]
-position = Vector2(210.1867, 145.53882)
+[node name="Task2" parent="Environment/Task" instance=ExtResource("7_ksn7p")]
+position = Vector2(211.36563, 219.2937)
+status = SubResource("Resource_t6ghf")
 
-[node name="program4" parent="Environment" instance=ExtResource("7_i50dk")]
-position = Vector2(145.83588, 209.3466)
+[node name="Task3" parent="Environment/Task" instance=ExtResource("7_ksn7p")]
+position = Vector2(79.971756, 219.21815)
+status = SubResource("Resource_t6ghf")
 
-[node name="program5" parent="Environment" instance=ExtResource("7_i50dk")]
-position = Vector2(369.84195, 146.3534)
+[node name="Task5" parent="Environment/Task" instance=ExtResource("7_ksn7p")]
+position = Vector2(369.32806, 156.062)
+status = SubResource("Resource_t6ghf")
+
+[node name="Task4" parent="Environment/Task" instance=ExtResource("7_ksn7p")]
+position = Vector2(209.11784, 91.258484)
+status = SubResource("Resource_t6ghf")
 
 [node name="Portals" type="Node2D" parent="."]
 
